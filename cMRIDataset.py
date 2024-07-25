@@ -4,7 +4,7 @@ from torch.utils.data import Dataset
 from torchvision.io import read_image
 
 class cMRIDataset(Dataset):
-    def __init__(self, df, img_dir='fake1000', split='train', transform=None):
+    def __init__(self, df, img_dir='AI Generated Images', split='train', transform=None):
         self.df = df
         self.split = split
         self.img_dir = img_dir
