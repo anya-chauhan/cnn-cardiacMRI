@@ -1,10 +1,21 @@
-pandas
-scikit-learn
-torch
-torchvision
-pytorch-lightning
-matplotlib
-numpy
-scipy
-Pillow
-seaborn
+# Import necessary libraries
+import pandas as pd
+import os
+import random
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+from torchvision import transforms
+from torchvision.io import read_image
+import pytorch_lightning as L
+from pytorch_lightning.callbacks import ModelCheckpoint
+from pytorch_lightning.loggers import TensorBoardLogger
+from pytorch_lightning.callbacks import EarlyStopping
+from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import pearsonr
